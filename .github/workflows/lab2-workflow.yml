@@ -27,5 +27,5 @@ jobs:
         run: echo ${{ github.event.inputs.custom_message }}
       
       - name: Printing run-job boolean value
-        if: ${{ github.event.inputs.run-job == 'true' }} 
-        run: echo ${{ github.event.inputs.run-job }}
+        if: ${{ inputs.run-job == true }} 
+        run: echo ${{ inputs.run-job }}
