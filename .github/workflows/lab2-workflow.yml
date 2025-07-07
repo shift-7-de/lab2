@@ -18,9 +18,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "Exploring Workflow Dispatch Trigger"
+      
 
   job2:
     runs-on: ubuntu-latest
     steps:
       - name: Printing Custom Message
         run: echo ${{ github.event.inputs.custom_message }}
+      
+      - name: Printing run-job boolean value
+        run: echo ${{ github.event.inputs.run-job }}
